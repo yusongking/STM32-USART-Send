@@ -1,8 +1,8 @@
 # STM32-USART-Send
 
-​	Frist of all,Receive and Transmit Not one-to-one correspondence. It TX correspond RX, and RX correspond TX. Anyway, today we will introduce Send of USART.
+Frist of all,Receive and Transmit Not one-to-one correspondence. It TX correspond RX, and RX correspond TX. Anyway, today we will introduce Send of USART.
 
-​	At first, Introduce initialization USART.
+At first, Introduce initialization USART.
 
 ```C
 void init_usart(void){
@@ -50,7 +50,7 @@ void Usart_Send_string(USART_TypeDef* USARTx,unsigned char* str){
 }
 ```
 
-> Send string，and need detect USART_FLAG_TC。
-> USART_FLAG_TXE 发送缓冲区空标志：说明可以往数据寄存器写入数据了，但并不代码数据发送完成了。
-> USART_FLAG_TC发送完成标志：这个才是代表USART在缓冲区的数据发送完成了，即从机接收到了数据。
+> Send string，and need detect USART_FLAG_TC。  
+> USART_FLAG_TXE 发送缓冲区空标志：说明可以往数据寄存器写入数据了，但并不代码数据发送完成了。  
+> USART_FLAG_TC发送完成标志：这个才是代表USART在缓冲区的数据发送完成了，即从机接收到了数据。  
 
